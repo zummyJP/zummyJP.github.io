@@ -1,5 +1,5 @@
 {
-    "short_name": "mkr",
+    "short_name": "倉庫管理",
     "name": "倉庫管理アプリ",
     "display": "standalone",
     "start_url": "index.html",
