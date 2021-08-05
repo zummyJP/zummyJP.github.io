@@ -1,1 +1,26 @@
-Hello World
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <title>倉庫管理</title>
+  </head>
+  <body>
+    <div id="app">
+        <p><a href="check/blog.html">指示データのダウンロード</a></p>
+        <p><a href="check/open_file.html">ダウンロードした指示データの読み込み</a></p>
+     </div>
+
+    <script>
+        // service workerの登録関係
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service_worker.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
+  </body>
+</html>
