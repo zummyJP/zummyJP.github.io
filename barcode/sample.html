@@ -43,60 +43,21 @@ function nextfeild2(str,len){
 <!-- メインフレーム START -->
 <div id="tmMainFrame" style="width: 900px;">
 
-	<!-- サイトヘッダー START -->
-	<div id="tmHead">
-<div style="position: relative;"><a href="//web-designer.cman.jp/"><img src="/image/pageTopLogo.png" width="900" border="0" alt="WEBページ作成リファレンス" style="max-width: 900px;width: 100%;height: 55px;" id="tmTopLogoImg"></a><div style="position: absolute;width:220px;right:5px;bottom:5px;line-height: 1em;vertical-align: middle;" id="tmSrchArea"><script>
-  (function() {
-    var cx = 'partner-pub-5032335798617606:5086396111';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only></gcse:searchbox-only>
-</div></div>
-	</div>
-	<!-- サイトヘッダー END -->
-
-	
 	<!-- コンテンツエリア（左サイド＋メインコンテンツ） START -->
 	<div id="tmSideMain">
 
 		<!-- メインコンテンツ（右全体）  START -->
 		<div id="tmRightCont" style="float: right;width: 734px;">
 
-
-			<!-- コンテンツヘッダー  START -->
-			<div id="tmContHeadStr">
-				<h1>MAXレングス入力で次項目に自動移動</h1>
-				<div class="tmContNaiyo">
-					<p>最大入力桁数まで入力したら、自動で次の項目へカーソルを移動します。<br>
-					郵便番号、電話番号、クレジットカード番号など、入力桁数が決まっている項目の入力が簡易化できます。</p>
-				</div>
-			</div>
-			<!-- コンテンツヘッダー  END -->
-
 			<!-- コンテンツ説明  START-->
 			<div id="tmContMain">
 
-				<h2>指定した桁数入力で次項目に自動移動のサンプル</h2>
+				<h2>入庫処理サンプル</h2>
 				<form name="form2">
 				<div class="tmContNaiyo">
-					<p>
-					最大入力桁数をjavascriptの引数に指定し、その桁数の入力で次項目に自動で移動します。<br>
-					maxlengthの指定不可の項目の移動も可能です。また、maxlengthと相違する桁数を引数に指定した場合、指定した桁数の入力で移動します。<br></p>
 				<div class="m-tbl">
 					<table class="tmTable tmMargL15px">
 					<tbody>
-					<tr><th>ラジオボタン</th>
-					<td>
-						<input id="rdo1" name="rdo" type="radio" value="1" onclick="nextfeild2(this,1)">a
-						<input id="rdo2" name="rdo" type="radio" value="2" onclick="nextfeild2(this,1)">b　（桁数＝1を指定）<br>
-					</td></tr>
 					<tr><th>チェックボックス</th>
 					<td>
 						<input id="chk1" name="chk1" type="checkbox" value="1" onclick="nextfeild2(this,1)">A
@@ -106,34 +67,13 @@ function nextfeild2(str,len){
 					<td>
 						<input id="chk" name="chk" type="button" value="確認" onclick="nextfeild2(this,2)">　（桁数＝2を指定）<br>
 					</td></tr>
-					<tr><th>テキストエリア</th>
-					<td>
-						<textarea id="area" name="area" maxlength="20" cols="20" onkeyup="nextfeild2(this,10)"></textarea>　（桁数＝10を指定、maxlength＝20）<br>
-					</td></tr>
 					<tr><th>テキスト１</th>
 					<td>
-						<input id="txt1" name="txt1" type="text" maxlength="10" size="10" onkeyup="nextfeild2(this,5)">　（桁数＝5を指定、maxlength＝10）<br>
-					</td></tr>
-					<tr><th>テキスト２</th>
-					<td>
-						<input id="txt2" name="txt2" type="text" maxlength="10" size="10" onkeyup="nextfeild2(this,10)">　（桁数＝10を指定、maxlength＝10）<br>
+						<input id="txt1" name="txt1" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">　（桁数＝13）<br>
 					</td></tr>
 					</tbody>
 					</table>
 				</div><br>
-
-				<div class="selSample">指定した桁数入力で次項目に自動で移動するjavascript</div>
-				<div class="bg_Sample">
-					<div class="sampleJs">
-						function nextfeild2(str,len){<br>
-						if (str.value.length &gt;= len) {<br>
-							for (var i = 0, elm = str.form.elements; i &lt; elm.length; i++) {<br>
-								if (elm[i] == str) {<br>
-								(elm[i + 1] || elm[0]).focus();<br>
-						break;}}}<br>
-						return(str);}
-					</div>
-				</div>
 
 				</div>
 				</form>
