@@ -11,24 +11,13 @@
   <meta name="robots" content="all">
   <meta http-equiv="Content-Language" content="ja">
   <title>次項目に自動移動 【JavaScript 動的サンプル】</title>
-  <link href="../../../css/tm01_v2.css" rel="stylesheet" type="text/css" id="tm01css" title="tm01css">
-  <link href="../../../css/javascript_ref_v2.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="../../../js/tm01_v2.js"></script>
-  <script type="text/javascript" src="../../../js/javascript_ref.js"></script>
-  <style type="text/css">
-</style>
 <script type="text/javascript">
-// ----- maxLengthまで入力したら次項目へカーソル移動 ---------------------------------------------------------------
-function nextfeild(str){
-	if (str.value.length >= str.maxLength) {
-	for (var i = 0, elm = str.form.elements; i < elm.length; i++) {
-		if (elm[i] == str) {
-			(elm[i + 1] || elm[0]).focus();
-			break;}}}
-	return(str);
-}
 // ----- lenに指定した桁数入力したら次項目へカーソル移動 ---------------------------------------------------------------
-function nextfeild2(str,len){
+function nextfeild2(str,len,timesEnterTab){
+  console.log('a: '+timesEnterTab);
+  timesEnterTab=(timesEnterTab==null) ? 1 : timesEnterTab;
+  console.log('b: '+timesEnterTab);
+
 	if (str.value.length >= len) {
 	for (var i = 0, elm = str.form.elements; i < elm.length; i++) {
 		if (elm[i] == str) {
@@ -58,27 +47,38 @@ function nextfeild2(str,len){
 				<div class="m-tbl">
 					<table class="tmTable tmMargL15px">
 					<tbody>
-					<tr><th>チェックボックス</th>
-					<td>
-						<input id="chk1" name="chk1" type="checkbox" value="1" onclick="nextfeild2(this,1)">A
-						<input id="chk2" name="chk2" type="checkbox" value="2" onclick="nextfeild2(this,1)">B　（桁数＝1を指定）<br>
-					</td></tr>
-					<tr><th>一般ボタン</th>
-					<td>
-						<input id="chk" name="chk" type="button" value="確認" onclick="nextfeild2(this,2)">　（桁数＝2を指定）<br>
-					</td></tr>
-					<tr><th>テキスト１</th>
-					<td>
-						<input id="txt1" name="txt1" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">　（桁数＝13）<br>
-					</td></tr>
+          <tr><th>取消</th><th>No.</th><th>JAN</th><th>名称</th><th>数量</th><th>うち不良数量</th><th>日時</th></tr>
+          <tr>
+            <td>
+              <input id="deleted" name="deleted" type="checkbox" value="1" onclick="nextfeild2(this,1)">
+            </td>
+            <td>
+              <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">　（桁数＝13）
+            </td>
+            <td>
+              <input id="product_name" name="product_name" type="text" size="40" readonly="readonly">(品目の名称を表示)
+            </td>
+            <td>
+              <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">　（桁数＝5）<br>
+            </td>
+            <td>
+              <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,2)">　（桁数＝5）<br>
+            </td>
+            <td>
+              <input id="created" name="created" type="text" size="20" readonly="readonly">(入力時現在の日時を表示)
+            </td>
+
+					</tr>
+
+
 					</tbody>
 					</table>
 				</div><br>
 
+        <input id="chk" name="chk" type="button" value="入庫実績データを登録する" onclick="nextfeild2(this,2)">　（桁数＝12を指定）
+
 				</div>
 				</form>
-
-				<a href="#tmMainFrame" class="tmPageTop">ページTOP</a>
 
 		</div>
 		<!-- メインコンテンツ（右全体）  END -->
@@ -86,20 +86,8 @@ function nextfeild2(str,len){
 	</div>
 	<!-- コンテンツエリア（サイドメニュー＋メインコンテンツ） END -->
 
-
-
-	<!-- 表示デバイス  START -->
-	<div id="tmDevice">
-<table style="width:100%"><tr><td><a href="javascript:void(0)" onclick="tmChangeView('smart')" id="tmViewSmart">スマートフォン・タブレット</a></td><td style="text-align: right;"><a href="https://www.cman.co.jp" style="color: #666;font-size:95%">運営 : CMAN 株式会社シーマン</a></td></tr></table>
-	</div>
-	<!-- 表示デバイス  END -->
-
 </div>
 <!-- メインフレーム END -->
-
-
-<!-- 画面サイズ判定用 -->
-<input type="hidden" value="0" id="tmCgiSideOff">
 
 </body>
 </html>
