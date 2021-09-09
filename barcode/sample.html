@@ -45,7 +45,7 @@ function nextfeild2(str,len,timesEnterTab){
 				<div class="m-tbl">
 					<table class="tmTable tmMargL15px">
 					<tbody>
-          <tr><th>取消</th><th>No.<br>(連番を自動表示)</th><th>JAN<br>(桁数＝13)</th><th>名称<br>(マスタから自動表示)</th><th>数量<br>(桁数＝5)</th><th>うち不良数量<br>(桁数＝5)</th><th>日時<br>(入力時現在の日時を表示)</th></tr>
+          <tr><th>取消</th><th>No.<br>(連番を自動表示)</th><th>JAN<br>(桁数＝13)</th><th>名称<br></th><th>数量<br>(桁数＝5)</th><th>うち不良数量<br>(桁数＝5)</th><th>日時<br>(入力時現在の日時を表示)</th></tr>
 
           <tr>
             <td>
@@ -55,19 +55,19 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="sequence" name="sequence" type="number" maxlength="10" size="10" value="1" readonly="readonly">
             </td>
             <td>
-              <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">
+              <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13,2)">
             </td>
             <td>
-              <input id="product_name" name="product_name" type="text" size="40" readonly="readonly">
+              <label id="product_name" size="40">(マスタから自動表示)</label>
             </td>
             <td>
-              <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
+              <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,4)">
             </td>
             <td>
-              <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,2)">
+              <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
             </td>
             <td>
-              <input id="created" name="created" type="text" size="20" value="2021-09-02 10:15:11" readonly="readonly">
+              <label id="created" size="20">2021-09-02 10:15:11</label>
             </td>
           </tr>
 
@@ -82,7 +82,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">
             </td>
             <td>
-              <input id="product_name" name="product_name" type="text" size="40" readonly="readonly">
+              <label id="product_name" size="40">(マスタから自動表示)</label>
             </td>
             <td>
               <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
@@ -91,7 +91,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,2)">
             </td>
             <td>
-              <input id="created" name="created" type="text" size="20" value="2021-09-02 10:17:30" readonly="readonly">
+              <label id="created" size="20">2021-09-02 10:17:30</label>
             </td>
           </tr>
           <tr>
@@ -105,7 +105,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">
             </td>
             <td>
-              <input id="product_name" name="product_name" type="text" size="40" readonly="readonly">
+              <label id="product_name" size="40">(マスタから自動表示)</label>
             </td>
             <td>
               <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
@@ -114,7 +114,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,2)">
             </td>
             <td>
-              <input id="created" name="created" type="text" size="20" value="2021-09-02 10:20:02" readonly="readonly">
+              <label id="created" size="20">2021-09-02 10:20:02</label>
             </td>
           </tr>
 					</tbody>
