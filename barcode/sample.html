@@ -23,6 +23,10 @@ function nextfeild2(str,len,timesEnterTab){
 			break;}}}
 	return(str);
 }
+
+function alert_message(){
+  alert('バーコードスキャンした品目を入荷実績データとして、システムに登録します。');
+}
 </script>
 
 </head>
@@ -52,16 +56,16 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="deleted" name="deleted" type="checkbox" value="0" onclick="nextfeild2(this,1)">
             </td>
             <td>
-              <input id="sequence" name="sequence" type="number" maxlength="10" size="10" value="1" readonly="readonly">
+              <label id="sequence">1</label>
             </td>
             <td>
-              <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13,2)">
+              <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13,1)">
             </td>
             <td>
               <label id="product_name" size="40">(マスタから自動表示)</label>
             </td>
             <td>
-              <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,4)">
+              <input id="value" name="value" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
             </td>
             <td>
               <input id="value_defective" name="value_defective" type="text" type="number" maxlength="5" size="10" onkeyup="nextfeild2(this,5,3)">
@@ -76,7 +80,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="deleted" name="deleted" type="checkbox" value="0" onclick="nextfeild2(this,1)">
             </td>
             <td>
-              <input id="sequence" name="sequence" type="number" maxlength="10" size="10" value="2" readonly="readonly">
+              <label id="sequence">2</label>
             </td>
             <td>
               <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">
@@ -99,7 +103,7 @@ function nextfeild2(str,len,timesEnterTab){
               <input id="deleted" name="deleted" type="checkbox" value="0" onclick="nextfeild2(this,1)">
             </td>
             <td>
-              <input id="sequence" name="sequence" type="number" maxlength="10" size="10" value="3" readonly="readonly">
+              <label id="sequence">3</label>
             </td>
             <td>
               <input id="product_id" name="product_id" type="text" maxlength="13" size="20" onkeyup="nextfeild2(this,13)">
@@ -121,7 +125,7 @@ function nextfeild2(str,len,timesEnterTab){
 					</table>
 				</div><br>
 
-        <input id="chk" name="chk" type="button" value="入庫実績データを登録する" onclick="nextfeild2(this,2)">　（桁数＝12を指定）
+        <input id="chk" name="chk" type="button" value="入庫実績データを登録する" onclick="alert_message()">
 
 				</div>
 				</form>
