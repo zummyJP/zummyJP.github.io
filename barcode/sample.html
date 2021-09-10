@@ -19,8 +19,13 @@ function nextfeild2(str,len,timesEnterTab){
 	if (str.value.length >= len) {
 	for (var i = 0, elm = str.form.elements; i < elm.length; i++) {
 		if (elm[i] == str) {
-			(elm[i + timesEnterTab] || elm[0]).focus();
-			break;}}}
+//		(elm[i + timesEnterTab] || elm[0]).focus();
+      if (elm[i + timesEnterTab]){
+        setTimeout( function(){
+          $list.eq(index+1).focus();
+        } ,100)
+      }
+      break;}}}
 	return(str);
 }
 
