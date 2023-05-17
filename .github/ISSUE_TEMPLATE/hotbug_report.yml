@@ -99,6 +99,7 @@ body:
     attributes:
       label: 関連イシュー
       description: "description"
-      value: "dummy value"
+      value: >
+### 関連イシューのURL:
     validations:
       required: false
