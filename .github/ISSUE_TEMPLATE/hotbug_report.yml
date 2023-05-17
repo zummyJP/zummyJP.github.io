@@ -36,10 +36,19 @@ body:
         - 終了
     validations:
       required: true
-
-      label: 関連イシュー
+  - type: checkboxes
+    id: functions
+    attributes:
+      label: 機能
       description: "description"
-      value: |
-### 関連イシューのURL:
+      options:
+        - label: 代理店選択
+        - label: 申込 (Default)
+        - label: 受付・貸出
+        - label: オールマイティ・事前決済
+        - label: 呼出・マイページ
+        - label: マスタ・売上集計
+        - label: インフラ・その他
     validations:
-      required: false
+      required: true
+
