@@ -19,3 +19,27 @@ body:
         - 問い合わせ
     validations:
       required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: ステータス
+      description: "description"
+      options:
+        - 新規 (Default)
+        - 着手中
+        - 修正完了
+        - 修正確認完了
+        - 差し戻し
+        - 再現待ち
+        - 見送り
+        - 保留
+        - 終了
+    validations:
+      required: true
+
+      label: 関連イシュー
+      description: "description"
+      value: |
+### 関連イシューのURL:
+    validations:
+      required: false
