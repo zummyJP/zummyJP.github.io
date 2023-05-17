@@ -69,15 +69,37 @@ body:
     attributes:
       label: 概要
       description: "description"
-      value: |
-### 現在の動作:
-
-### 期待する動作:
-
-### 発生した手順:
-
-### 環境(デバイス, OS, ブラウザ):
-
-### その他:
+      value: "DUMMY VALUE"
     validations:
       required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 緊急度
+      description: "description"
+      options:
+        - 高: 当日中に対応
+        - 中: 週末までに対応
+        - 低: 順次対応 (Default)
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: 重要度
+      description: "description"
+      options:
+        - 高: 営業に支障あり
+        - 中: (Default)
+        - 低: 軽微な問題
+    validations:
+      required: true
+  - type: textarea
+    id: related
+    attributes:
+      label: 関連イシュー
+      description: "description"
+      value: |
+### 関連イシューのURL:
+    validations:
+      required: false
