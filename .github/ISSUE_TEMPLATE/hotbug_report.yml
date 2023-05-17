@@ -1,7 +1,7 @@
-name: Hot Bug Report
+name: チケット
 description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+title: ""
+labels: []
 assignees:
   - octocat
 body:
@@ -9,54 +9,116 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+  - type: dropdown
+    id: project
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: プロジェクト
+      description:
+      options:
+        - SGS 23-24シーズン (Default)
     validations:
-      required: false
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: issue種別
+      description:
+      options:
+        - 不具合 (Default)
+        - 要望
+        - 問い合わせ
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: ステータス
+      description:
+      options:
+        - 新規 (Default)
+        - 着手中
+        - 修正完了
+        - 修正確認完了
+        - 差し戻し
+        - 再現待ち
+        - 見送り
+        - 保留
+        - 終了
+    validations:
+      required: true
+  - type: checkboxes
+    id: functions
+    attributes:
+      label: 機能
+      description:
+      options:
+        - label: 代理店選択
+        - label: 申込 (Default)
+        - label: 受付・貸出
+        - label: オールマイティ・事前決済
+        - label: 呼出・マイページ
+        - label: マスタ・売上集計
+        - label: インフラ・その他
+    validations:
+      required: true
+  - type: checkboxes
+    id: users
+    attributes:
+      label: ユーザー
+      description:
+      options:
+        - label: 全ユーザー (Default)
+        - label: 1: 高鷲スノーパーク
+        - label: 2: ダイナランド
+        - label: 4: ホワイトピア高鷲
+        - label: 5: 明宝スキー場
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: 概要
+      description:
+      value: |
+### 現在の動作:
+
+### 期待する動作:
+
+### 発生した手順:
+
+### 環境(デバイス, OS, ブラウザ):
+
+### その他:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: urgency
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: 緊急度
+      description:
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 高: 当日中に対応
+        - 中: 週末までに対応
+        - 低: 順次対応 (Default)
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: importance
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: 重要度
+      description:
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - 高
+        - 中 (Default)
+        - 低
+    validations:
+      required: true
   - type: textarea
-    id: logs
+    id: related
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: 関連イシュー
+      description:
+      value: |
+### 関連イシューのURL:
+    validations:
+      required: false
