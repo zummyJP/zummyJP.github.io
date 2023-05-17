@@ -64,3 +64,20 @@ body:
         - label: 明宝スキー場
     validations:
       required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 概要
+      description: "description"
+      value: |
+### 現在の動作:
+
+### 期待する動作:
+
+### 発生した手順:
+
+### 環境(デバイス, OS, ブラウザ):
+
+### その他:
+    validations:
+      required: true
