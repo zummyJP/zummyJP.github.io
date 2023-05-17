@@ -10,15 +10,6 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: dropdown
-    id: project
-    attributes:
-      label: プロジェクト
-      description:
-      options:
-        - SGS 23-24シーズン (Default)
-    validations:
-      required: true
-  - type: dropdown
     id: type
     attributes:
       label: issue種別
@@ -68,10 +59,10 @@ body:
       description:
       options:
         - label: 全ユーザー (Default)
-        - label: 1: 高鷲スノーパーク
-        - label: 2: ダイナランド
-        - label: 4: ホワイトピア高鷲
-        - label: 5: 明宝スキー場
+        - label: 高鷲スノーパーク
+        - label: ダイナランド
+        - label: ホワイトピア高鷲
+        - label: 明宝スキー場
     validations:
       required: true
   - type: textarea
@@ -108,9 +99,9 @@ body:
       label: 重要度
       description:
       options:
-        - 高
-        - 中 (Default)
-        - 低
+        - 高: 営業に支障あり
+        - 中: (Default)
+        - 低: 軽微な問題
     validations:
       required: true
   - type: textarea
