@@ -70,11 +70,15 @@ body:
       label: 概要
       description: "description"
       value: |
-        **HUBBERS!!** This is the github/docs open source repo. You may want to open an issue in the internal-only github/docs-content repo instead.
+### 現在の動作:
 
-        * For questions, ask in [Discussions](https://github.com/github/docs/discussions).
-        * Before you file an issue read the [Contributing guide](https://github.com/github/docs/blob/main/CONTRIBUTING.md).
-        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/github/docs/issues).
+### 期待する動作:
+
+### 発生した手順:
+
+### 環境(デバイス, OS, ブラウザ):
+
+### その他:
       
     validations:
       required: true
@@ -105,6 +109,8 @@ body:
     attributes:
       label: 関連イシュー
       description: "description"
-      value: "### 関連イシューのURL:"
+      value: |
+### 現在の動作:
+
     validations:
       required: false
