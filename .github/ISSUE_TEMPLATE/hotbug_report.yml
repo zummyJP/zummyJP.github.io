@@ -51,4 +51,16 @@ body:
         - label: インフラ・その他
     validations:
       required: true
-
+  - type: checkboxes
+    id: users
+    attributes:
+      label: ユーザー
+      description: "description"
+      options:
+        - label: 全ユーザー (Default)
+        - label: 高鷲スノーパーク
+        - label: ダイナランド
+        - label: ホワイトピア高鷲
+        - label: 明宝スキー場
+    validations:
+      required: true
