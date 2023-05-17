@@ -12,7 +12,7 @@ body:
     id: type
     attributes:
       label: issue種別
-      description: いずれか１つを選択
+      description: "description"
       options:
         - 不具合 (Default)
         - 要望
@@ -23,7 +23,7 @@ body:
     id: status
     attributes:
       label: ステータス
-      description:
+      description: "description"
       options:
         - 新規 (Default)
         - 着手中
@@ -40,7 +40,7 @@ body:
     id: functions
     attributes:
       label: 機能
-      description:
+      description: "description"
       options:
         - label: 代理店選択
         - label: 申込 (Default)
@@ -55,7 +55,7 @@ body:
     id: users
     attributes:
       label: ユーザー
-      description:
+      description: "description"
       options:
         - label: 全ユーザー (Default)
         - label: 高鷲スノーパーク
@@ -68,7 +68,7 @@ body:
     id: what-happened
     attributes:
       label: 概要
-      description:
+      description: "description"
       value: |
 ### 現在の動作:
 
@@ -85,7 +85,7 @@ body:
     id: urgency
     attributes:
       label: 緊急度
-      description:
+      description: "description"
       options:
         - 高: 当日中に対応
         - 中: 週末までに対応
@@ -96,7 +96,7 @@ body:
     id: importance
     attributes:
       label: 重要度
-      description:
+      description: "description"
       options:
         - 高: 営業に支障あり
         - 中: (Default)
@@ -107,7 +107,7 @@ body:
     id: related
     attributes:
       label: 関連イシュー
-      description:
+      description: "description"
       value: |
 ### 関連イシューのURL:
     validations:
