@@ -1,14 +1,13 @@
-name: チケット
-description: File a bug report
+name: イシュー
+description: インシデントを登録します
 title: "[sgs]"
-labels: []
+labels: ["sgs"]
 assignees:
   - zummyJP
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      value:
   - type: dropdown
     id: type
     attributes:
