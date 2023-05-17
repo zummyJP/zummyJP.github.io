@@ -1,5 +1,5 @@
 name: イシュー
-description: インシデントを登録します
+description: "インシデントを登録します"
 title: "[sgs]"
 labels: ["sgs"]
 assignees:
@@ -7,7 +7,7 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: インシデント内容を正確に登録ください
+      value: "インシデント内容を正確に登録ください"
   - type: dropdown
     id: type
     attributes:
