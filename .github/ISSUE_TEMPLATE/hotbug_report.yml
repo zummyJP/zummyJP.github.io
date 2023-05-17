@@ -1,9 +1,9 @@
 name: チケット
 description: File a bug report
-title: ""
+title: "[sgs]"
 labels: []
 assignees:
-  - octocat
+  - zummyJP
 body:
   - type: markdown
     attributes:
