@@ -12,7 +12,7 @@ body:
     id: type
     attributes:
       label: issue種別
-      description:
+      description: いずれか１つを選択
       options:
         - 不具合 (Default)
         - 要望
