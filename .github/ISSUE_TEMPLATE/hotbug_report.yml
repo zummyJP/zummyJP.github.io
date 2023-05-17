@@ -69,7 +69,13 @@ body:
     attributes:
       label: 概要
       description: "description"
-      value: "DUMMY VALUE"
+      value: |
+        **HUBBERS!!** This is the github/docs open source repo. You may want to open an issue in the internal-only github/docs-content repo instead.
+
+        * For questions, ask in [Discussions](https://github.com/github/docs/discussions).
+        * Before you file an issue read the [Contributing guide](https://github.com/github/docs/blob/main/CONTRIBUTING.md).
+        * Check to make sure someone hasn't already opened a similar [issue](https://github.com/github/docs/issues).
+      
     validations:
       required: true
   - type: dropdown
