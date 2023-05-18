@@ -1,6 +1,6 @@
 name: イシュー
 description: "インシデントを登録します"
-title: "[sgs]"
+title: "[sgs] "
 labels: ["sgs"]
 assignees: 
   - zummyJP
@@ -11,10 +11,10 @@ body:
   - type: dropdown
     id: type
     attributes:
-      label: issue種別
+      label: 種別
       description: "description"
       options:
-        - 不具合 (Default)
+        - 不具合
         - 要望
         - 問い合わせ
     validations:
@@ -25,7 +25,7 @@ body:
       label: ステータス
       description: "description"
       options:
-        - 新規 (Default)
+        - 新規
         - 着手中
         - 修正完了
         - 修正確認完了
@@ -43,7 +43,7 @@ body:
       description: "description"
       options:
         - label: 代理店選択
-        - label: 申込 (Default)
+        - label: 申込
         - label: 受付・貸出
         - label: オールマイティ・事前決済
         - label: 呼出・マイページ
@@ -57,7 +57,7 @@ body:
       label: ユーザー
       description: "description"
       options:
-        - label: 全ユーザー (Default)
+        - label: 全ユーザー
         - label: 高鷲スノーパーク
         - label: ダイナランド
         - label: ホワイトピア高鷲
@@ -70,13 +70,11 @@ body:
       label: 概要
       description: "description"
       value: |
-        ### 現在の動作:
-
-        ### 期待する動作:
-
-        ### 発生した手順:
+        ### 現在の動作、発生した手順:
 
         ### 環境(デバイス, OS, ブラウザ):
+
+        ### 期待する動作:
 
         ### その他:
 
@@ -88,9 +86,9 @@ body:
       label: 緊急度
       description: "description"
       options:
-        - 高: 当日中に対応
-        - 中: 週末までに対応
-        - 低: 順次対応 (Default)
+        - 高 (当日中に対応)
+        - 中 (週末までに対応)
+        - 低 (順次対応)
     validations:
       required: true
   - type: dropdown
@@ -99,18 +97,18 @@ body:
       label: 重要度
       description: "description"
       options:
-        - 高: 営業に支障あり
-        - 中: (Default)
-        - 低: 軽微な問題
+        - 高 (営業に支障あり)
+        - 中
+        - 低 (軽微な問題)
     validations:
       required: true
   - type: textarea
     id: related
     attributes:
-      label: 関連イシュー
+      label: 関連インシデント
       description: "description"
       value: |
-        ### 関連イシューのURL:
+        ### 関連インシデントのURL:
 
     validations:
       required: false
