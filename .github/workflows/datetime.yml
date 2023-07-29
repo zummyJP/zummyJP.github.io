@@ -21,7 +21,7 @@ jobs:
       - name: change datetime 13:45, test reserve V[3]
         run: console.log(d.toISOString())
 
-      - name: change datetime 14:00, test reserve V[1]
+#     - name: change datetime 14:00, test reserve V[1]
 #       run: date
                 
       - name: reset server_time[1]
