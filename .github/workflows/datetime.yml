@@ -11,9 +11,15 @@ jobs:
     name: datetime
     runs-on: ubuntu-latest
     steps:
-      - name: Set current datetime as env variable
+      - name: Set current date as env variable
         env:
           TZ: 'Asia/Tokyo'
-        run: echo "CURRENT_DATETIME=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
-      - name: Show current datetime
-        run: echo ${{ env.CURRENT_DATETIME }}
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Set current time as env variable
+        env:
+          TZ: 'Asia/Tokyo'
+        run: echo "CURRENT_TIME=$(date +'%H:%M:%S')" >> $GITHUB_ENV
+      - name: Show current date
+        run: echo ${{ env.CURRENT_DATE }}
+      - name: Show current time
+        run: echo ${{ env.CURRENT_TIME }}
