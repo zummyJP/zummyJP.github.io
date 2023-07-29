@@ -12,14 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: show local datetime
-        run: date
+        run: date +"%Y/%m/%d %p %I:%M:%S"
         
       - name: change datetime 13:45, test reserve V[1]
-        run: let d = new Date()
+        run: date -s 2000/01/01 13:45:00
       - name: change datetime 13:45, test reserve V[2]
-        run: d.setTime(60000)
-      - name: change datetime 13:45, test reserve V[3]
-        run: console.log(d.toISOString())
+        run: date +"%Y/%m/%d %p %I:%M:%S"
 
 #     - name: change datetime 14:00, test reserve V[1]
 #       run: date
@@ -29,4 +27,6 @@ jobs:
       - name: reset server_time[2]
         run: echo ${server_time}
       - name: reset server_time[3]
-        run: date
+        run: date -s ${server_time}
+      - name: reset server_time[4]
+        run: date +"%Y/%m/%d %p %I:%M:%S"
