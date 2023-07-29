@@ -12,17 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: show local datetime
+        uses: actions/checkout@v3
         run: date
         
       - name: change datetime 13:45, test reserve V
+        uses: actions/checkout@v3
         run: let d = new Date()
       - run: d.setTime(60000)
       - run: console.log(d.toISOString())
 
       - name: change datetime 14:00, test reserve V
+        uses: actions/checkout@v3
 #       run: date
                 
       - name: reset server_time
+        uses: actions/checkout@v3
         run: server_time=`curl http://worldtimeapi.org/api/timezone/Asia/Tokyo.txt | grep ^datetime | cut -d " " -f 2`
       - run: echo ${server_time}
       - run: date
