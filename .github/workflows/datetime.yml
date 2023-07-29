@@ -11,6 +11,9 @@ jobs:
     name: datetime
     runs-on: ubuntu-latest
     steps:
+      - name: test
+        run: NOW_TIME=`date "+%Y/%m/%d %H:%M:%S"`;echo ${NOW_TIME};
+        
       - name: get local datetime
         run: now=`date "+%Y/%m/%d %H:%M:%S"`
       - name: show local datetime
