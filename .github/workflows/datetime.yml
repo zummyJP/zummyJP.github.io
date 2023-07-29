@@ -11,12 +11,9 @@ jobs:
     name: datetime
     runs-on: ubuntu-latest
     steps:
-      - name: test 1
-        run: NOW_TIME=`date "+%Y/%m/%d %H:%M:%S"`;
-      - name: test 2
-        run: echo ${NOW_TIME};
-        
-      - name: get local datetime
-        run: now=`date "+%Y/%m/%d %H:%M:%S"`
-      - name: show local datetime
-        run: echo ${now}
+      - name: Set current datetime as env variable
+        env:
+          TZ: 'Asia/Tokyo'
+        run: echo "CURRENT_DATETIME=$(date +'%Y-%m-%d %H:%M:%S')"
+      - name: Show current datetime
+        run: echo ${{ env.CURRENT_DATETIME }}
