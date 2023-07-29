@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: get local datetime
-        run: now=`date "+%Y/%m/%d %H:%M:%S"
+        run: now=`date "+%Y/%m/%d %H:%M:%S"`
       - name: show local datetime
         run: echo ${now}
