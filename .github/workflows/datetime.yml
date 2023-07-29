@@ -11,22 +11,7 @@ jobs:
     name: datetime
     runs-on: ubuntu-latest
     steps:
+      - name: get local datetime
+        run: now=`date "+%Y/%m/%d %H:%M:%S"
       - name: show local datetime
-        run: date +"%Y/%m/%d %p %I:%M:%S"
-        
-      - name: change datetime 13:45, test reserve V[1]
-        run: date -s 2000/01/01 13:45:00
-      - name: change datetime 13:45, test reserve V[2]
-        run: date +"%Y/%m/%d %p %I:%M:%S"
-
-#     - name: change datetime 14:00, test reserve V[1]
-#       run: date
-                
-      - name: reset server_time[1]
-        run: server_time=`curl http://worldtimeapi.org/api/timezone/Asia/Tokyo.txt | grep ^datetime | cut -d " " -f 2`
-      - name: reset server_time[2]
-        run: echo ${server_time}
-      - name: reset server_time[3]
-        run: date -s ${server_time}
-      - name: reset server_time[4]
-        run: date +"%Y/%m/%d %p %I:%M:%S"
+        run: echo ${now}
